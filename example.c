@@ -54,60 +54,10 @@ int main(void)
 	_delay_ms(1000);
 
 	while (1) {
-		// _delay_ms(1000);
-		//LED_ON;  // turn the LED on while moving the mouse
-		p = circle;
-		//for (i=0; i<36; i++) {
-		//	x = pgm_read_byte(p++);
-		//	y = pgm_read_byte(p++);
-		//	usb_mouse_move(x, y, 0);
-		//	_delay_ms(20);
-		//}
-		//LED_OFF;
-		//_delay_ms(9000);
-		// This sequence creates a right click
+		// This sequence creates a left click
 		usb_mouse_buttons(1, 0, 0);
 		_delay_ms(10);
 		usb_mouse_buttons(0, 0, 0);
 	}
 }
 
-
-int8_t const PROGMEM circle[] = {
-16, -1,
-15, -4,
-14, -7,
-13, -9,
-11, -11,
-9, -13,
-7, -14,
-4, -15,
-1, -16,
--1, -16,
--4, -15,
--7, -14,
--9, -13,
--11, -11,
--13, -9,
--14, -7,
--15, -4,
--16, -1,
--16, 1,
--15, 4,
--14, 7,
--13, 9,
--11, 11,
--9, 13,
--7, 14,
--4, 15,
--1, 16,
-1, 16,
-4, 15,
-7, 14,
-9, 13,
-11, 11,
-13, 9,
-14, 7,
-15, 4,
-16, 1
-};
