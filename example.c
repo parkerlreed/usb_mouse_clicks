@@ -55,9 +55,9 @@ int main(void)
 
 	while (1) {
 		// This sequence creates a left click
-		usb_mouse_buttons(1, 0, 0);
+		cookie_click(1, 0, 0);
 		_delay_ms(10);
-		usb_mouse_buttons(0, 0, 0);
+		cookie_click(0, 0, 0);
 	}
 }
 
